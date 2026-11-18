@@ -1,0 +1,21 @@
+{
+  "name": "minibank",
+  "version": "3.0.0",
+  "private": true,
+  "engines": {
+    "node": ">=20.6"
+  },
+  "scripts": {
+    "dev": "node --watch --env-file=.env local.js",
+    "start": "node --env-file=.env local.js",
+    "check-db": "node --env-file=.env scripts/check-db.js",
+    "seed": "node --env-file=.env scripts/seed-admin.js",
+    "audit": "npm audit --omit=dev"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "express": "^4.19.2",
+    "jsonwebtoken": "^9.0.2",
+    "pg": "^8.12.0"
+  }
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mini Bank</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- LOGIN & REGISTRASI -->
+  <section id="auth" class="hide">
+    <div class="card">
+      <h1>🏦 Mini Bank</h1>
+      <div class="row tabs2">
+        <button onclick="authTab('login')">Masuk</button>
+        <button onclick="authTab('reg')">Daftar Nasabah</button>
+      </div>
+      <div id="f_login">
+        <input id="l_user" placeholder="Username">
+        <input id="l_pass" type="password" placeholder="Password">
+        <button class="pri" onclick="login()">Masuk</button>
+      </div>
+      <div id="f_reg" class="hide">
+        <input id="r_name" placeholder="Nama lengkap">
+        <input id="r_nik" placeholder="NIK / NIS">
+        <input id="r_wa" placeholder="No. WhatsApp (08xxxxxxxx)">
+        <input id="r_user" placeholder="Username">
+        <input id="r_pass" type="password" placeholder="Password (min 8)">
+        <input id="r_pin" type="password" maxlength="6" placeholder="PIN 6 digit">
+        <label>Foto KTP / Kartu Pelajar</label>
+        <input id="r_foto" type="file" accept="image/*">
+        <button class="pri" onclick="register()">Kirim Pendaftaran</button>
+        <p class="muted">Admin akan memverifikasi data Anda dan menghubungi lewat WhatsApp setelah akun disetujui.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- APLIKASI -->
+  <section id="app" class="hide">
+    <header>
+      <b>🏦 Mini Bank</b>
+      <span id="who"></span>
+      <button onclick="logout()">Keluar</button>
+    </header>
+    <nav id="nav"></nav>
+    <main id="main"></main>
+  </section>
+
+  <script src="app.js"></script>
+</body>
+</html>
